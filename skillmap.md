@@ -3,13 +3,13 @@
 * description: Level up your game making skills by completing the tutorials in this guide.
 
 ## interface
-* name: Learn to use MakeCode Arcade
+* name: test
 * description: This will teach you how to complete tutorials in Microsoft MakeCode Arcade.
 * completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/understanding-arcade-tutorials.pdf
 
 ### interface-activity1
 
-* name: Learn to use MakeCode Arcade
+* name: test2
 * type: tutorial
 * description: Bliblablubb
 * tags: easy
