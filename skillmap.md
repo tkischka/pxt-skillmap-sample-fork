@@ -11,7 +11,7 @@
 
 * name: Learn to use MakeCode Arcade
 * type: tutorial
-* description: Intro to our tutorial cards
+* description: Bliblablubb
 * tags: easy
 
 * url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/interface/activity1 
