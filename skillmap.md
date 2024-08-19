@@ -1,123 +1,70 @@
-# sample
-* name: Hacker School
-* description: Level up your game making skills by completing the tutorials in this guide.
+# MakeCode Skill Map Sample
 
-## interface
-* name: test
-* description: This will teach you how to complete tutorials in Microsoft MakeCode Arcade.
-* completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/understanding-arcade-tutorials.pdf
+This is an example skill map that contains three separate learning paths.You can view the content here:
+https://arcade.makecode.com/skillmap#github:tkischka/pxt-skillmap-sample-fork/skillmap.md
 
-### interface-activity1
+Github-hosted skill maps are loaded in the same manner as tutorials, with a URL fragment
+formatted as follows:
 
-* name: test2
-* type: tutorial
-* description: Bliblablubb
-* tags: easy
+`#github:[organization name]/[repository name]/[markdown file name]`
 
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/interface/activity1 
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/interface/activity1.png
+## Syntax
 
-## space
-* name: Design a Space Explorer
-* description: Let's explore the depths of space! We'll design a vessel for space travel, add some enemies, and populate the universe with planets.
-* completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/design-a-space-explorer.pdf
+The skill map definition can be found in the `skillmap.md` file. Metadata about the skill
+map itself can be found under the top-level heading:
 
-### space-activity1
+- `id`: The string after the heading (eg `# sample`). Cannot contain spaces.
+- `name`: The title of your skill map. This will be displayed in the banner on the page.
+- `description`: A description of the map contents. This is also shown in the banner.
+- `infoUrl` (optional): A URL to a page with additional educator information
 
-* name: Ship Design
-* type: tutorial
-* description: Draw and code a spaceship!
-* tags: easy
-* next: space-activity2
+### Learning Paths
 
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/space/activity1
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/activity1.png
+A skill map consists of one or more "paths", each path being an ordered sequence of activities.
+The first activity in each path is unlocked, and completing an activity unlocks the next one.
 
-### space-activity2
+A learning path is defined by a level two heading (`##`) has has the following properties:
 
-* name: Projectiles
-* type: tutorial
-* description: Customize your ship with projectiles and effects.
-* tags: easy, projectiles, kinds
-* next: space-activity3
+- `id`: The string after the heading (eg `## interface`). Must be unique within this skill map.
+- `name`: The title of the path, displayed above the linked activities.
+- `description`: Additional details (not currently displayed).
+- `completionUrl`: URL to a certificate, displayed when a user has completed the entire path.
 
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/space/activity2
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/activity2.png
+### Activities
 
-### space-activity3
+Each learning path has multiple activities, defined by level three headings (`###`). Currently,
+an "activity" is simply a MakeCode tutorial, and has the following properties:
 
-* name: Enemies
-* description: Watch out for danger! Add enemies and lives to your game.
-* type: tutorial
-* tags: easy, enemies, kinds
-* next: space-activity4
+- `id`: The string after the heading (eg `### space-activity1`). Must be unique within this skill map.
+- `name`: The title of the activity. Displayed on the activity card.
+- `type`: The type of activity. Must be `tutorial` currently.
+- `description`: Details about the activity, displayed on the back of the card.
+- `tags`: Descriptive tags displayed on the bottom of the activity card.
+- `url`: Link to the tutorial. See the [MakeCode Tutorial Documentation](https://makecode.com/writing-docs/user-tutorials) for details on tutorial authoring and link formatting.
+- `imageUrl`: URL for the image displayed on the front of the activity card.
 
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/space/activity3
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/activity3.png
+## Forking
 
-### space-activity4
+If you fork this repo, be sure to change all URL references to https://github.com/tkischka/pxt-skillmap-sample-fork to your forked repo's URL. Otherwise you won't see your changes.
 
-* name: Fuel Up
-* type: tutorial
-* description: Use an extension to add a fuel gauge to your ship. Make sure to refuel often!
-* tags: intermediate, extensions
+## Contributing
 
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/space/activity4
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/activity4.png
+When you submit a pull request, a CLA bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
 
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+## Trademarks
 
-## platformer
-* name: Learn to Make a Platformer
-* description: A skillmap that takes you through how to build a platformer with multiple levels.
-* completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/learn-to-make-a-platformer.pdf
-
-### platformer-activity1
-
-* name: Simple Platformer
-* type: tutorial
-* description: Learn how to make a player character that can jump and move around a tilemap.
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/platformer/activity1
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/platformer/activity1.png
-* tags: easy
-* next: platformer-activity2
-
-### platformer-activity2
-
-* name: Camera and Tiles
-* type: tutorial
-* description: Learn how to use the camera and add tile overlap events to give the player a way to win and lose.
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/platformer/activity2
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/platformer/activity2.png
-* tags: easy, tiles
-* next: platformer-activity3
-
-### platformer-activity3
-
-* name: Simple Enemies
-* type: tutorial
-* description: Learn how to add enemies to your game that follow the player.
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/platformer/activity3
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/platformer/activity3.png
-* tags: intermediate, overlaps
-* next: platformer-activity4
-
-### platformer-activity4
-
-* name: Multiple Levels
-* type: tutorial
-* description: Add a second level to your platformer using functions.
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/platformer/activity4
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/platformer/activity4.png
-* tags: intermediate, functions
-* next: platformer-activity5
-
-### platformer-activity5
-
-* name: Enemy AI
-* type: tutorial
-* description: Add physics and AI to the enemies in your game.
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/platformer/activity5
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/platformer/activity5.png
-* tags: intermediate, AI, physics
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow
+[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
+Any use of third-party trademarks or logos are subject to those third-party's policies.
