@@ -1,5 +1,5 @@
 # sample
-* name: Game Maker Guide
+* name: Hacker School
 * description: Level up your game making skills by completing the tutorials in this guide.
 
 ## interface
